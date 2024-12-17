@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Time Challenge Leaderboard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/leaderboard.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Time Challenge Leaderboard</h1>
+    </div>
+
+    <div class="container">
+        <div class="leaderboard">
+            <div class="leaderboard-header">
+                <div>Rank</div>
+                <div>Player</div>
+                <div>Score</div>
+            </div>
+            <div class="leaderboard-body" id="leaderboard-body">
+                <!-- Leaderboard entries will be inserted here -->
+            </div>
+        </div>
+        <div class="last-updated" id="last-updated">
+            Last updated: Just now
+        </div>
+    </div>
+
+    <script type="module">
+        import { Leaderboard } from './src/js/leaderboard.js';
+        
+        // Initialize the leaderboard when the DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const leaderboard = new Leaderboard();
+            leaderboard.init();
+        });
+    </script>
+</body>
+</html>
